@@ -1,0 +1,802 @@
+[
+  {
+    "crop": "Barley",
+    "state": "Haryana",
+    "district": "Rohtak",
+    "mandi": "Rohtak Mandi",
+    "date": "2022-09-17",
+    "price": 4213
+  },
+  {
+    "crop": "Maize",
+    "state": "Uttar Pradesh",
+    "district": "Meerut",
+    "mandi": "Meerut Mandi",
+    "date": "2021-02-20",
+    "price": 4763
+  },
+  {
+    "crop": "Rice",
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "mandi": "Jaipur Mandi",
+    "date": "2025-08-20",
+    "price": 1641
+  },
+  {
+    "crop": "Cotton",
+    "state": "Gujarat",
+    "district": "Surat",
+    "mandi": "Surat Mandi",
+    "date": "2023-06-13",
+    "price": 3340
+  },
+  {
+    "crop": "Pulses",
+    "state": "Karnataka",
+    "district": "Hubli",
+    "mandi": "Hubli Mandi",
+    "date": "2022-07-02",
+    "price": 3703
+  },
+  {
+    "crop": "Wheat",
+    "state": "Uttar Pradesh",
+    "district": "Meerut",
+    "mandi": "Meerut Mandi",
+    "date": "2024-09-26",
+    "price": 4769
+  },
+  {
+    "crop": "Bajra",
+    "state": "Tamil Nadu",
+    "district": "Madurai",
+    "mandi": "Madurai Mandi",
+    "date": "2020-09-22",
+    "price": 3072
+  },
+  {
+    "crop": "Groundnut",
+    "state": "Uttar Pradesh",
+    "district": "Meerut",
+    "mandi": "Meerut Mandi",
+    "date": "2025-05-03",
+    "price": 2878
+  },
+  {
+    "crop": "Barley",
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "mandi": "Indore Krishi Mandi",
+    "date": "2020-02-14",
+    "price": 4189
+  },
+  {
+    "crop": "Cotton",
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "mandi": "Jodhpur Mandi",
+    "date": "2025-06-04",
+    "price": 3837
+  },
+  {
+    "crop": "Soybean",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "mandi": "Pune Mandi",
+    "date": "2022-07-18",
+    "price": 4986
+  },
+  {
+    "crop": "Barley",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "mandi": "Chennai Mandi",
+    "date": "2020-01-27",
+    "price": 1550
+  },
+  {
+    "crop": "Pulses",
+    "state": "West Bengal",
+    "district": "Howrah",
+    "mandi": "Howrah Mandi",
+    "date": "2023-12-15",
+    "price": 2205
+  },
+  {
+    "crop": "Maize",
+    "state": "Madhya Pradesh",
+    "district": "Jabalpur",
+    "mandi": "Jabalpur Mandi",
+    "date": "2025-09-04",
+    "price": 2580
+  },
+  {
+    "crop": "Barley",
+    "state": "Karnataka",
+    "district": "Hubli",
+    "mandi": "Hubli Mandi",
+    "date": "2025-10-24",
+    "price": 4093
+  },
+  {
+    "crop": "Barley",
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "mandi": "Indore Krishi Mandi",
+    "date": "2020-10-02",
+    "price": 2961
+  },
+  {
+    "crop": "Sugarcane",
+    "state": "Haryana",
+    "district": "Karnal",
+    "mandi": "Karnal Mandi",
+    "date": "2020-09-14",
+    "price": 342
+  },
+  {
+    "crop": "Sugarcane",
+    "state": "Uttar Pradesh",
+    "district": "Lucknow",
+    "mandi": "Lucknow Mandi",
+    "date": "2024-05-15",
+    "price": 260
+  },
+  {
+    "crop": "Bajra",
+    "state": "Rajasthan",
+    "district": "Kota",
+    "mandi": "Kota Mandi",
+    "date": "2023-12-03",
+    "price": 4018
+  },
+  {
+    "crop": "Maize",
+    "state": "Karnataka",
+    "district": "Hubli",
+    "mandi": "Hubli Mandi",
+    "date": "2021-06-09",
+    "price": 3576
+  },
+  {
+    "crop": "Soybean",
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "mandi": "Rajkot Mandi",
+    "date": "2021-05-02",
+    "price": 4906
+  },
+  {
+    "crop": "Groundnut",
+    "state": "Rajasthan",
+    "district": "Kota",
+    "mandi": "Kota Mandi",
+    "date": "2023-06-17",
+    "price": 3621
+  },
+  {
+    "crop": "Wheat",
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "mandi": "Nagpur APMC",
+    "date": "2020-04-06",
+    "price": 2232
+  },
+  {
+    "crop": "Bajra",
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "mandi": "Ludhiana Mandi",
+    "date": "2021-12-11",
+    "price": 3008
+  },
+  {
+    "crop": "Maize",
+    "state": "Gujarat",
+    "district": "Surat",
+    "mandi": "Surat Mandi",
+    "date": "2022-02-02",
+    "price": 4919
+  },
+  {
+    "crop": "Groundnut",
+    "state": "Punjab",
+    "district": "Patiala",
+    "mandi": "Patiala Mandi",
+    "date": "2024-03-20",
+    "price": 4232
+  },
+  {
+    "crop": "Bajra",
+    "state": "Uttar Pradesh",
+    "district": "Lucknow",
+    "mandi": "Lucknow Mandi",
+    "date": "2025-01-27",
+    "price": 1966
+  },
+  {
+    "crop": "Barley",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "mandi": "Chennai Mandi",
+    "date": "2021-04-27",
+    "price": 3317
+  },
+  {
+    "crop": "Pulses",
+    "state": "Haryana",
+    "district": "Karnal",
+    "mandi": "Karnal Mandi",
+    "date": "2022-03-18",
+    "price": 4140
+  },
+  {
+    "crop": "Pulses",
+    "state": "Maharashtra",
+    "district": "Pune",
+    "mandi": "Pune Mandi",
+    "date": "2024-09-12",
+    "price": 2537
+  },
+  {
+    "crop": "Pulses",
+    "state": "Karnataka",
+    "district": "Mysore",
+    "mandi": "Mysore Mandi",
+    "date": "2022-10-11",
+    "price": 4693
+  },
+  {
+    "crop": "Bajra",
+    "state": "Punjab",
+    "district": "Amritsar",
+    "mandi": "Amritsar Mandi",
+    "date": "2025-11-23",
+    "price": 2933
+  },
+  {
+    "crop": "Pulses",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "mandi": "Ahmedabad Mandi",
+    "date": "2020-03-22",
+    "price": 2268
+  },
+  {
+    "crop": "Cotton",
+    "state": "Karnataka",
+    "district": "Bangalore",
+    "mandi": "Bangalore Mandi",
+    "date": "2020-11-10",
+    "price": 2207
+  },
+  {
+    "crop": "Soybean",
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "mandi": "Nagpur APMC",
+    "date": "2022-03-16",
+    "price": 2509
+  },
+  {
+    "crop": "Wheat",
+    "state": "Tamil Nadu",
+    "district": "Madurai",
+    "mandi": "Madurai Mandi",
+    "date": "2022-06-29",
+    "price": 4815
+  },
+  {
+    "crop": "Pulses",
+    "state": "Haryana",
+    "district": "Rohtak",
+    "mandi": "Rohtak Mandi",
+    "date": "2024-10-25",
+    "price": 3868
+  },
+  {
+    "crop": "Pulses",
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "mandi": "Ludhiana Mandi",
+    "date": "2024-05-14",
+    "price": 2587
+  },
+  {
+    "crop": "Pulses",
+    "state": "Karnataka",
+    "district": "Mysore",
+    "mandi": "Mysore Mandi",
+    "date": "2022-06-17",
+    "price": 4092
+  },
+  {
+    "crop": "Soybean",
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "mandi": "Rajkot Mandi",
+    "date": "2020-10-09",
+    "price": 2475
+  },
+  {
+    "crop": "Maize",
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "mandi": "Nagpur APMC",
+    "date": "2020-01-16",
+    "price": 4528
+  },
+  {
+    "crop": "Barley",
+    "state": "Tamil Nadu",
+    "district": "Coimbatore",
+    "mandi": "Coimbatore Mandi",
+    "date": "2022-12-22",
+    "price": 3499
+  },
+  {
+    "crop": "Wheat",
+    "state": "West Bengal",
+    "district": "Siliguri",
+    "mandi": "Siliguri Mandi",
+    "date": "2023-03-27",
+    "price": 2784
+  },
+  {
+    "crop": "Barley",
+    "state": "Uttar Pradesh",
+    "district": "Lucknow",
+    "mandi": "Lucknow Mandi",
+    "date": "2023-11-25",
+    "price": 2723
+  },
+  {
+    "crop": "Bajra",
+    "state": "Haryana",
+    "district": "Karnal",
+    "mandi": "Karnal Mandi",
+    "date": "2023-11-17",
+    "price": 1557
+  },
+  {
+    "crop": "Cotton",
+    "state": "Tamil Nadu",
+    "district": "Madurai",
+    "mandi": "Madurai Mandi",
+    "date": "2022-06-22",
+    "price": 2976
+  },
+  {
+    "crop": "Groundnut",
+    "state": "West Bengal",
+    "district": "Howrah",
+    "mandi": "Howrah Mandi",
+    "date": "2022-02-26",
+    "price": 2488
+  },
+  {
+    "crop": "Maize",
+    "state": "Haryana",
+    "district": "Karnal",
+    "mandi": "Karnal Mandi",
+    "date": "2024-07-01",
+    "price": 4615
+  },
+  {
+    "crop": "Maize",
+    "state": "Haryana",
+    "district": "Rohtak",
+    "mandi": "Rohtak Mandi",
+    "date": "2023-03-03",
+    "price": 3380
+  },
+  {
+    "crop": "Barley",
+    "state": "Madhya Pradesh",
+    "district": "Jabalpur",
+    "mandi": "Jabalpur Mandi",
+    "date": "2023-11-29",
+    "price": 3358
+  },
+  {
+    "crop": "Sugarcane",
+    "state": "Uttar Pradesh",
+    "district": "Varanasi",
+    "mandi": "Varanasi Mandi",
+    "date": "2020-04-15",
+    "price": 356
+  },
+  {
+    "crop": "Bajra",
+    "state": "Uttar Pradesh",
+    "district": "Meerut",
+    "mandi": "Meerut Mandi",
+    "date": "2022-10-12",
+    "price": 3545
+  },
+  {
+    "crop": "Barley",
+    "state": "Uttar Pradesh",
+    "district": "Varanasi",
+    "mandi": "Varanasi Mandi",
+    "date": "2020-07-18",
+    "price": 4084
+  },
+  {
+    "crop": "Rice",
+    "state": "Tamil Nadu",
+    "district": "Coimbatore",
+    "mandi": "Coimbatore Mandi",
+    "date": "2021-07-12",
+    "price": 3075
+  },
+  {
+    "crop": "Wheat",
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "mandi": "Jaipur Mandi",
+    "date": "2020-10-28",
+    "price": 2429
+  },
+  {
+    "crop": "Barley",
+    "state": "West Bengal",
+    "district": "Howrah",
+    "mandi": "Howrah Mandi",
+    "date": "2022-05-03",
+    "price": 4919
+  },
+  {
+    "crop": "Wheat",
+    "state": "Punjab",
+    "district": "Amritsar",
+    "mandi": "Amritsar Mandi",
+    "date": "2021-03-13",
+    "price": 3316
+  },
+  {
+    "crop": "Cotton",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "mandi": "Chennai Mandi",
+    "date": "2025-03-03",
+    "price": 4345
+  },
+  {
+    "crop": "Pulses",
+    "state": "Maharashtra",
+    "district": "Nashik",
+    "mandi": "Nashik Krishi Mandi",
+    "date": "2022-12-26",
+    "price": 4262
+  },
+  {
+    "crop": "Cotton",
+    "state": "Uttar Pradesh",
+    "district": "Varanasi",
+    "mandi": "Varanasi Mandi",
+    "date": "2020-11-23",
+    "price": 3674
+  },
+  {
+    "crop": "Groundnut",
+    "state": "Karnataka",
+    "district": "Mysore",
+    "mandi": "Mysore Mandi",
+    "date": "2025-09-02",
+    "price": 2674
+  },
+  {
+    "crop": "Pulses",
+    "state": "Rajasthan",
+    "district": "Kota",
+    "mandi": "Kota Mandi",
+    "date": "2022-10-14",
+    "price": 2820
+  },
+  {
+    "crop": "Wheat",
+    "state": "Punjab",
+    "district": "Amritsar",
+    "mandi": "Amritsar Mandi",
+    "date": "2021-06-23",
+    "price": 2419
+  },
+  {
+    "crop": "Soybean",
+    "state": "West Bengal",
+    "district": "Kolkata",
+    "mandi": "Kolkata Mandi",
+    "date": "2022-04-17",
+    "price": 3432
+  },
+  {
+    "crop": "Maize",
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "mandi": "Jodhpur Mandi",
+    "date": "2022-03-02",
+    "price": 3672
+  },
+  {
+    "crop": "Wheat",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "mandi": "Ahmedabad Mandi",
+    "date": "2025-05-05",
+    "price": 4771
+  },
+  {
+    "crop": "Wheat",
+    "state": "Madhya Pradesh",
+    "district": "Jabalpur",
+    "mandi": "Jabalpur Mandi",
+    "date": "2024-09-26",
+    "price": 4992
+  },
+  {
+    "crop": "Rice",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "mandi": "Ahmedabad Mandi",
+    "date": "2025-08-21",
+    "price": 3940
+  },
+  {
+    "crop": "Wheat",
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "mandi": "Jaipur Mandi",
+    "date": "2021-11-20",
+    "price": 3054
+  },
+  {
+    "crop": "Soybean",
+    "state": "Tamil Nadu",
+    "district": "Coimbatore",
+    "mandi": "Coimbatore Mandi",
+    "date": "2022-01-19",
+    "price": 1928
+  },
+  {
+    "crop": "Wheat",
+    "state": "Tamil Nadu",
+    "district": "Chennai",
+    "mandi": "Chennai Mandi",
+    "date": "2024-11-14",
+    "price": 1672
+  },
+  {
+    "crop": "Sugarcane",
+    "state": "West Bengal",
+    "district": "Siliguri",
+    "mandi": "Siliguri Mandi",
+    "date": "2025-07-30",
+    "price": 392
+  },
+  {
+    "crop": "Barley",
+    "state": "Maharashtra",
+    "district": "Nagpur",
+    "mandi": "Nagpur APMC",
+    "date": "2021-01-21",
+    "price": 3048
+  },
+  {
+    "crop": "Maize",
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "mandi": "Indore Krishi Mandi",
+    "date": "2020-03-06",
+    "price": 2089
+  },
+  {
+    "crop": "Groundnut",
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "mandi": "Rajkot Mandi",
+    "date": "2020-07-22",
+    "price": 2934
+  },
+  {
+    "crop": "Rice",
+    "state": "Uttar Pradesh",
+    "district": "Meerut",
+    "mandi": "Meerut Mandi",
+    "date": "2023-05-14",
+    "price": 2646
+  },
+  {
+    "crop": "Groundnut",
+    "state": "Uttar Pradesh",
+    "district": "Lucknow",
+    "mandi": "Lucknow Mandi",
+    "date": "2022-04-06",
+    "price": 2675
+  },
+  {
+    "crop": "Bajra",
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "mandi": "Rajkot Mandi",
+    "date": "2023-09-20",
+    "price": 3246
+  },
+  {
+    "crop": "Cotton",
+    "state": "Haryana",
+    "district": "Hisar",
+    "mandi": "Hisar Mandi",
+    "date": "2024-06-18",
+    "price": 4700
+  },
+  {
+    "crop": "Sugarcane",
+    "state": "Karnataka",
+    "district": "Bangalore",
+    "mandi": "Bangalore Mandi",
+    "date": "2025-12-26",
+    "price": 365
+  },
+  {
+    "crop": "Sugarcane",
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "mandi": "Indore Krishi Mandi",
+    "date": "2020-09-19",
+    "price": 339
+  },
+  {
+    "crop": "Pulses",
+    "state": "Haryana",
+    "district": "Hisar",
+    "mandi": "Hisar Mandi",
+    "date": "2023-04-20",
+    "price": 4689
+  },
+  {
+    "crop": "Pulses",
+    "state": "Madhya Pradesh",
+    "district": "Jabalpur",
+    "mandi": "Jabalpur Mandi",
+    "date": "2025-11-28",
+    "price": 2709
+  },
+  {
+    "crop": "Barley",
+    "state": "Punjab",
+    "district": "Ludhiana",
+    "mandi": "Ludhiana Mandi",
+    "date": "2022-04-04",
+    "price": 2148
+  },
+  {
+    "crop": "Cotton",
+    "state": "Tamil Nadu",
+    "district": "Madurai",
+    "mandi": "Madurai Mandi",
+    "date": "2023-11-22",
+    "price": 4074
+  },
+  {
+    "crop": "Groundnut",
+    "state": "Rajasthan",
+    "district": "Jodhpur",
+    "mandi": "Jodhpur Mandi",
+    "date": "2022-03-28",
+    "price": 4204
+  },
+  {
+    "crop": "Groundnut",
+    "state": "Madhya Pradesh",
+    "district": "Indore",
+    "mandi": "Indore Krishi Mandi",
+    "date": "2021-02-11",
+    "price": 3783
+  },
+  {
+    "crop": "Cotton",
+    "state": "West Bengal",
+    "district": "Siliguri",
+    "mandi": "Siliguri Mandi",
+    "date": "2021-06-29",
+    "price": 2193
+  },
+  {
+    "crop": "Wheat",
+    "state": "Gujarat",
+    "district": "Rajkot",
+    "mandi": "Rajkot Mandi",
+    "date": "2023-02-28",
+    "price": 2171
+  },
+  {
+    "crop": "Cotton",
+    "state": "Tamil Nadu",
+    "district": "Madurai",
+    "mandi": "Madurai Mandi",
+    "date": "2023-06-03",
+    "price": 4530
+  },
+  {
+    "crop": "Maize",
+    "state": "Uttar Pradesh",
+    "district": "Varanasi",
+    "mandi": "Varanasi Mandi",
+    "date": "2022-11-26",
+    "price": 2842
+  },
+  {
+    "crop": "Pulses",
+    "state": "Haryana",
+    "district": "Karnal",
+    "mandi": "Karnal Mandi",
+    "date": "2025-10-02",
+    "price": 3835
+  },
+  {
+    "crop": "Maize",
+    "state": "Haryana",
+    "district": "Hisar",
+    "mandi": "Hisar Mandi",
+    "date": "2021-06-12",
+    "price": 4597
+  },
+  {
+    "crop": "Sugarcane",
+    "state": "Punjab",
+    "district": "Patiala",
+    "mandi": "Patiala Mandi",
+    "date": "2022-09-25",
+    "price": 308
+  },
+  {
+    "crop": "Sugarcane",
+    "state": "Uttar Pradesh",
+    "district": "Varanasi",
+    "mandi": "Varanasi Mandi",
+    "date": "2022-09-04",
+    "price": 294
+  },
+  {
+    "crop": "Bajra",
+    "state": "Haryana",
+    "district": "Hisar",
+    "mandi": "Hisar Mandi",
+    "date": "2022-11-17",
+    "price": 3251
+  },
+  {
+    "crop": "Pulses",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "mandi": "Ahmedabad Mandi",
+    "date": "2021-01-09",
+    "price": 4721
+  },
+  {
+    "crop": "Sugarcane",
+    "state": "Rajasthan",
+    "district": "Jaipur",
+    "mandi": "Jaipur Mandi",
+    "date": "2020-11-14",
+    "price": 400
+  },
+  {
+    "crop": "Barley",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "mandi": "Ahmedabad Mandi",
+    "date": "2023-02-26",
+    "price": 2458
+  },
+  {
+    "crop": "Maize",
+    "state": "West Bengal",
+    "district": "Howrah",
+    "mandi": "Howrah Mandi",
+    "date": "2023-05-26",
+    "price": 4556
+  }
+]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p><strong>Crop:</strong> {{ crop }}</p>
+    <p><strong>Harvesting Date:</strong> {{ date }}</p>
+    <p><strong>State:</strong> {{ state }}</p>
+    <p><strong>District:</strong> {{ district }}</p>
+    {% if mandi_results and mandi_results|length > 0 %}
+        <h2>Expected Prices in Mandis</h2>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Mandi</th>
+                <th>District</th>
+                <th>Price (₹)</th>
+                <th>Date</th>
+            </tr>
+            {% for row in mandi_results %}
+            <tr>
+                <td>{{ row.mandi }}</td>
+                <td>{{ row.district }}</td>
+                <td>{{ row.price }}</td>
+                <td>{{ row.date if row.date is defined else date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h2>No price prediction available for the given inputs.</h2>
+    {% endif %}
+    <a href="/">Try another prediction</a>
+</body>
+</html> 
