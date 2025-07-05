@@ -1,21 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Crop Price Predictor</title>
-</head>
-<body>
-    <h1>Crop Price Predictor</h1>
-    <form method="post">
-        <label for="crop">Crop:</label>
-        <input type="text" id="crop" name="crop" required><br><br>
-        <label for="date">Harvesting Date:</label>
-        <input type="date" id="date" name="date" required><br><br>
-        <label for="state">State:</label>
-        <input type="text" id="state" name="state" required><br><br>
-        <label for="district">District:</label>
-        <input type="text" id="district" name="district" required><br><br>
-        <input type="submit" value="Predict Price">
-    </form>
-</body>
-</html> 
+{% extends 'base.html' %}
+{% block title %}Farmer Helper - Crop Price Predictor{% endblock %}
+{% block content %}
+<div class="container mb-5" id="predict">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow p-4">
+                <h2 class="section-title mb-3">Crop Price Prediction</h2>
+                <form method="post" id="predictForm">
+                    <label for="crop">Crop:</label>
+                    <select id="crop" name="crop" class="form-select mb-3" required onchange="checkDataAvailability()">
+                        <option value="">Select Crop</option>
+                        {% for crop in crops %}
+                            <option value="{{ crop }}" {% if crop == selected_crop %}selected{% endif %}>{{ crop }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="date">Harvesting Date:</label>
+                    <input type="date" id="date" name="date" class="form-control mb-3" required>
+                    <label for="state">State:</label>
+                    <select id="state" name="state" class="form-select mb-3" required onchange="updateDistricts(); checkDataAvailability();">
+                        <option value="">Select State</option>
+                        {% for state in states %}
+                            <option value="{{ state }}" {% if state == selected_state %}selected{% endif %}>{{ state }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="district">District:</label>
+                    <select id="district" name="district" class="form-select mb-3" required onchange="checkDataAvailability()">
+                        <option value="">Select District</option>
+                        {% for district in districts %}
+                            <option value="{{ district }}" {% if district == selected_district %}selected{% endif %}>{{ district }}</option>
+                        {% endfor %}
+                    </select>
+                    <div id="data-availability-card" class="mb-3" style="display:none;"></div>
+                    <button type="submit" class="btn btn-main w-100 mt-3">Predict</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+{{ super() }}
+<script>
+function updateDistricts() {
+    var state = document.getElementById('state').value;
+    var districtSelect = document.getElementById('district');
+    districtSelect.innerHTML = '<option value="">Loading...</option>';
+    fetch('/districts?state=' + encodeURIComponent(state))
+        .then(response => response.json())
+        .then(data => {
+            districtSelect.innerHTML = '<option value="">Select District</option>';
+            data.forEach(function(district) {
+                var option = document.createElement('option');
+                option.value = district;
+                option.text = district;
+                districtSelect.appendChild(option);
+            });
+        });
+}
+function checkDataAvailability() {
+    var crop = document.getElementById('crop').value;
+    var state = document.getElementById('state').value;
+    var district = document.getElementById('district').value;
+    var card = document.getElementById('data-availability-card');
+    if (!crop || !state) {
+        card.style.display = 'none';
+        return;
+    }
+    fetch(`/data-availability?crop=${encodeURIComponent(crop)}&state=${encodeURIComponent(state)}&district=${encodeURIComponent(district)}`)
+        .then(response => response.json())
+        .then(data => {
+            card.style.display = 'block';
+            if (data.can_predict) {
+                card.className = 'card p-3 mb-3 border-success';
+                card.innerHTML = `<span class='fw-bold text-success'>${data.count} record(s) available. Prediction possible.</span>`;
+            } else {
+                card.className = 'card p-3 mb-3 border-danger';
+                card.innerHTML = `<span class='fw-bold text-danger'>No data available for this combination. Prediction not possible.</span>`;
+            }
+        });
+}
+window.onload = function() { checkDataAvailability(); };
+</script>
+{% endblock %} 

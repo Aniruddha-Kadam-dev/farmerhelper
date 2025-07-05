@@ -1,0 +1,26 @@
+body { background: #f6fbf4; font-family: 'Segoe UI', Arial, sans-serif; }
+.hero { background: #e6f4ea; border-radius: 1rem; padding: 2rem; margin-bottom: 2rem; }
+.card { border-radius: 1rem; box-shadow: 0 2px 16px rgba(58,125,58,0.07); transition: box-shadow 0.3s; }
+.card:hover { box-shadow: 0 4px 32px rgba(58,125,58,0.15); }
+.section-title { color: #3a7d3a; font-weight: bold; letter-spacing: 0.5px; }
+.btn-main, .btn-main:visited { background: #3a7d3a; color: #fff; border-radius: 2rem; border: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; box-shadow: 0 2px 8px rgba(58,125,58,0.08); }
+.btn-main:hover, .btn-main:focus { background: #2e5e2e; color: #fff; transform: translateY(-2px) scale(1.04); box-shadow: 0 6px 24px rgba(58,125,58,0.18); }
+.btn-outline-success:hover, .btn-outline-success:focus { background: #3a7d3a !important; color: #fff !important; border-color: #3a7d3a !important; }
+input, select, textarea { border-radius: 0.5rem !important; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #3a7d3a33; border-color: #3a7d3a; box-shadow: 0 0 0 2px #3a7d3a22; }
+.table { background: #fff; border-radius: 1rem; overflow: hidden; }
+.navbar { border-radius: 0 0 1rem 1rem; box-shadow: 0 2px 12px rgba(58,125,58,0.06); }
+.navbar-brand { font-size: 1.7rem; color: #3a7d3a !important; letter-spacing: 1px; font-weight: 700; transition: color 0.2s, transform 0.2s; }
+.navbar-brand:hover, .navbar-brand:focus { color: #2e5e2e !important; transform: scale(1.08) rotate(-2deg); text-shadow: 0 2px 8px #3a7d3a22; }
+.nav-link { color: #3a7d3a !important; font-weight: 500; margin-right: 0.5rem; transition: color 0.2s; }
+.nav-link:hover, .nav-link:focus { color: #2e5e2e !important; text-decoration: underline; }
+.footer { background: #e6f4ea; border-radius: 1rem 1rem 0 0; box-shadow: 0 -2px 12px rgba(58,125,58,0.06); }
+footer a img { filter: grayscale(1) brightness(0.7); transition: filter 0.2s, transform 0.2s; }
+footer a:hover img, footer a:focus img { filter: none; transform: scale(1.15) rotate(-8deg); }
+.alert-success { background: #e6fbe6; color: #2e5e2e; border: 1px solid #b6eab6; }
+.alert-warning { background: #fffbe6; color: #7d6a3a; border: 1px solid #eada9b; }
+.form-select, .form-control { min-height: 44px; font-size: 1rem; }
+::-webkit-input-placeholder { color: #a3bfa3; }
+::-moz-placeholder { color: #a3bfa3; }
+:-ms-input-placeholder { color: #a3bfa3; }
+::placeholder { color: #a3bfa3; } 

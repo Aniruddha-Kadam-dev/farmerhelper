@@ -1,36 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Prediction Result</title>
-</head>
-<body>
-    <h1>Prediction Result</h1>
-    <p><strong>Crop:</strong> {{ crop }}</p>
-    <p><strong>Harvesting Date:</strong> {{ date }}</p>
-    <p><strong>State:</strong> {{ state }}</p>
-    <p><strong>District:</strong> {{ district }}</p>
-    {% if mandi_results and mandi_results|length > 0 %}
-        <h2>Expected Prices in Mandis</h2>
-        <table border="1" cellpadding="5">
-            <tr>
-                <th>Mandi</th>
-                <th>District</th>
-                <th>Price (₹)</th>
-                <th>Date</th>
-            </tr>
-            {% for row in mandi_results %}
-            <tr>
-                <td>{{ row.mandi }}</td>
-                <td>{{ row.district }}</td>
-                <td>{{ row.price }}</td>
-                <td>{{ row.date if row.date is defined else date }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-    {% else %}
-        <h2>No price prediction available for the given inputs.</h2>
-    {% endif %}
-    <a href="/">Try another prediction</a>
-</body>
-</html> 
+{% extends 'base.html' %}
+{% block title %}Prediction Results - Farmer Helper{% endblock %}
+{% block content %}
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow p-4 mb-4">
+                <h2 class="section-title mb-3">Prediction Results</h2>
+                {% if metrics %}
+                <div class="mb-3">
+                    <strong>Model Evaluation Metrics:</strong>
+                    <ul class="mb-0">
+                        <li>R²: {{ metrics.r2|round(3) }}</li>
+                        <li>MAE: {{ metrics.mae|round(2) }}</li>
+                        <li>RMSE: {{ metrics.rmse|round(2) }}</li>
+                    </ul>
+                </div>
+                {% endif %}
+                <div class="mb-3">
+                    <strong>Crop:</strong> {{ crop }}<br>
+                    <strong>Harvesting Date:</strong> {{ date }}<br>
+                    <strong>State:</strong> {{ state }}<br>
+                    <strong>District:</strong> {{ district }}<br>
+                </div>
+                {% if ml_prediction is not none and mandi_used %}
+                    <div class="alert alert-success">
+                        <strong>ML Predicted Price for <u>{{ mandi_used }}</u>:</strong> ₹{{ ml_prediction|round(2) }}
+                    </div>
+                {% endif %}
+                {% if mandi_results and mandi_results|length > 0 %}
+                    <h5 class="mb-2">Expected Prices in Mandis</h5>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-2 gap-2">
+                        <div class="d-flex gap-2 align-items-center">
+                            <label for="districtFilter" class="me-1 mb-0">Filter by District:</label>
+                            <select id="districtFilter" class="form-select form-select-sm" style="min-width:150px;">
+                                <option value="">All</option>
+                                {% for d in mandi_results|map(attribute='district')|unique|list %}
+                                    <option value="{{ d }}">{{ d }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="sortSelect" class="ms-3 me-1 mb-0">Sort by:</label>
+                            <select id="sortSelect" class="form-select form-select-sm" style="min-width:150px;">
+                                <option value="price-asc">Price (Low to High)</option>
+                                <option value="price-desc">Price (High to Low)</option>
+                                <option value="mandi-asc">Mandi (A-Z)</option>
+                                <option value="mandi-desc">Mandi (Z-A)</option>
+                            </select>
+                        </div>
+                        <a href="{{ url_for('download_csv', crop=crop, state=state, date=date) }}" class="btn btn-outline-success btn-sm">Download as CSV</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle" id="mandiTable">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Mandi</th>
+                                    <th>District</th>
+                                    <th>Price (₹)</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mandiTableBody">
+                                {% for row in mandi_results %}
+                                <tr>
+                                    <td>{{ row.mandi }}</td>
+                                    <td>{{ row.district }}</td>
+                                    <td>{{ row.price }}</td>
+                                    <td>{{ row.date if row.date is defined else date }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <div class="alert alert-warning">No price prediction available for the given inputs.</div>
+                {% endif %}
+                <a href="/" class="btn btn-main mt-3">Try another prediction</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+const mandiResults = {{ mandi_results|tojson }};
+const tableBody = document.getElementById('mandiTableBody');
+const districtFilter = document.getElementById('districtFilter');
+const sortSelect = document.getElementById('sortSelect');
+
+function renderTable(data) {
+    tableBody.innerHTML = '';
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${row.mandi}</td><td>${row.district}</td><td>${row.price}</td><td>${row.date || ''}</td>`;
+        tableBody.appendChild(tr);
+    });
+}
+
+function filterAndSort() {
+    let filtered = mandiResults;
+    const district = districtFilter.value;
+    if (district) {
+        filtered = filtered.filter(r => r.district === district);
+    }
+    const sortVal = sortSelect.value;
+    if (sortVal === 'price-asc') {
+        filtered = filtered.slice().sort((a, b) => a.price - b.price);
+    } else if (sortVal === 'price-desc') {
+        filtered = filtered.slice().sort((a, b) => b.price - a.price);
+    } else if (sortVal === 'mandi-asc') {
+        filtered = filtered.slice().sort((a, b) => a.mandi.localeCompare(b.mandi));
+    } else if (sortVal === 'mandi-desc') {
+        filtered = filtered.slice().sort((a, b) => b.mandi.localeCompare(a.mandi));
+    }
+    renderTable(filtered);
+}
+
+districtFilter.addEventListener('change', filterAndSort);
+sortSelect.addEventListener('change', filterAndSort);
+window.onload = filterAndSort;
+</script>
+{% endblock %} 
